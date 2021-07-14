@@ -1,11 +1,11 @@
-package OralExam;
+package liborInArrearsLiborMarketModel;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-import OralExam.LIBORMarketModelConstructionWithDynamicsAndMeasureSpecification.Dynamics;
-import OralExam.LIBORMarketModelConstructionWithDynamicsAndMeasureSpecification.Measure;
+import liborInArrearsLiborMarketModel.LIBORMarketModelConstructionWithDynamicsAndMeasureSpecification.Dynamics;
+import liborInArrearsLiborMarketModel.LIBORMarketModelConstructionWithDynamicsAndMeasureSpecification.Measure;
 import net.finmath.marketdata.model.curves.DiscountCurve;
 import net.finmath.marketdata.model.curves.ForwardCurve;
 import net.finmath.montecarlo.interestrate.LIBORMarketModel;
@@ -23,11 +23,11 @@ public class LiborInArrearsTest {
 	private final static DecimalFormat formatterDouble = new DecimalFormat("0.0000");
 	private final static DecimalFormat formatterDeviation = new DecimalFormat("0.000%;");
 
-	final int	numberOfPaths	= 10000;
+	final int	numberOfPaths	= 8000;
 	//parameters for the two time discretizations
 	final double simulationTimeStep = 0.1;
 	final double LIBORTimeStep = 0.5;
-	final int LIBORRateTimeHorizon = 15;
+	final int LIBORRateTimeHorizon = 10;
 	final double notional = 1000;
 
 	//fixing times for the forwards: the forwards corresponding to other fixing times will be interpolated

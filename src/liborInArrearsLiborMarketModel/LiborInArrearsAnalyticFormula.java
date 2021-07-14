@@ -1,4 +1,4 @@
-package OralExam;
+package liborInArrearsLiborMarketModel;
 
 public class LiborInArrearsAnalyticFormula {
 
