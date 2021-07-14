@@ -34,7 +34,6 @@ import net.finmath.time.TimeDiscretizationFromArray;
  * the simulation has to be created under log-normal or normal dynamics, and if the measure considered has to be
  * the terminal or the spot one.
  *
- * @author Andrea Mazzon
  *
  */
 public class LIBORMarketModelConstructionWithDynamicsAndMeasureSpecification {

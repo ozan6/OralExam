@@ -23,11 +23,11 @@ public class LiborInArrearsTest {
 	private final static DecimalFormat formatterDouble = new DecimalFormat("0.0000");
 	private final static DecimalFormat formatterDeviation = new DecimalFormat("0.000%;");
 
-	final int	numberOfPaths	= 8000;
+	final int	numberOfPaths	= 12000;
 	//parameters for the two time discretizations
 	final double simulationTimeStep = 0.1;
 	final double LIBORTimeStep = 0.5;
-	final int LIBORRateTimeHorizon = 10;
+	final int LIBORRateTimeHorizon = 16;
 	final double notional = 1000;
 
 	//fixing times for the forwards: the forwards corresponding to other fixing times will be interpolated
@@ -43,7 +43,6 @@ public class LiborInArrearsTest {
 
 		// We test it for a lognormal model, i.e we will use the analytical value within the Black Model to have a Benchmark value for the error
 		Dynamics dynamics = Dynamics.LOGNORMAL;
-		//Dynamics dynamics = Dynamics.NORMAL;
 
 		final   LIBORModelMonteCarloSimulationModel myLiborModelMonteCarloTerminal =
 				LIBORMarketModelConstructionWithDynamicsAndMeasureSpecification.createLIBORMarketModel(
@@ -57,7 +56,7 @@ public class LiborInArrearsTest {
 						dynamics,
 						Measure.TERMINAL, // first terminal
 						a, b, c, d,
-						3141 // seed
+						1897 // seed
 						);
 
 		final   LIBORModelMonteCarloSimulationModel myLiborModelMonteCarloSpot =
@@ -72,7 +71,7 @@ public class LiborInArrearsTest {
 						dynamics,
 						Measure.SPOT, // then spot
 						a, b, c, d,
-						3141 //seed
+						1897 //seed
 						);
 
 		// This one is only for extracting the variance of the model for the analytic formula to be used for get the variance
